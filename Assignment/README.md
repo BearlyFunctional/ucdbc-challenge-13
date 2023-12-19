@@ -12,24 +12,33 @@ Because this application won’t be deployed, you’ll also need to provide a li
 
 ```md
 AS A manager at an internet retail company
-I WANT a back end for my e-commerce website that uses the latest technologies
-SO THAT my company can compete with other e-commerce companies
+
+  I WANT a back end for my e-commerce website that uses the latest technologies
+    
+    SO THAT my company can compete with other e-commerce companies
 ```
 
 ## Acceptance Criteria
 
 ```md
+
 GIVEN a functional Express.js API
+
 WHEN I add my database name, MySQL username, and MySQL password to an environment variable file
-THEN I am able to connect to a database using Sequelize
+  THEN I am able to connect to a database using Sequelize
+
 WHEN I enter schema and seed commands
-THEN a development database is created and is seeded with test data
+  THEN a development database is created and is seeded with test data
+
 WHEN I enter the command to invoke the application
-THEN my server is started and the Sequelize models are synced to the MySQL database
+  THEN my server is started and the Sequelize models are synced to the MySQL database
+
 WHEN I open API GET routes in Insomnia for categories, products, or tags
-THEN the data for each of these routes is displayed in a formatted JSON
+  THEN the data for each of these routes is displayed in a formatted JSON
+
 WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete data in my database
+  THEN I am able to successfully create, update, and delete data in my database
+
 ```
 
 ## Mock-Up
@@ -60,7 +69,7 @@ Use the `schema.sql` file in the `db` folder to create your database with MySQL 
 
 Your database should contain the following four models, including the requirements listed for each model:
 
-* `Category`
+<!-- * `Category`
 
   * `id`
 
@@ -76,9 +85,9 @@ Your database should contain the following four models, including the requiremen
   
     * String.
   
-    * Doesn't allow null values.
+    * Doesn't allow null values. -->
 
-* `Product`
+<!-- * `Product`
 
   * `id`
   
@@ -118,9 +127,9 @@ Your database should contain the following four models, including the requiremen
   
     * Integer.
   
-    * References the `Category` model's `id`.
+    * References the `Category` model's `id`. -->
 
-* `Tag`
+<!-- * `Tag`
 
   * `id`
   
@@ -134,9 +143,9 @@ Your database should contain the following four models, including the requiremen
 
   * `tag_name`
   
-    * String.
+    * String. -->
 
-* `ProductTag`
+<!-- * `ProductTag`
 
   * `id`
 
@@ -158,9 +167,9 @@ Your database should contain the following four models, including the requiremen
 
     * Integer.
 
-    * References the `Tag` model's `id`.
+    * References the `Tag` model's `id`. -->
 
-### Associations
+<!-- ### Associations
 
 You'll need to execute association methods on your Sequelize models to create the following relationships between them:
 
@@ -168,7 +177,7 @@ You'll need to execute association methods on your Sequelize models to create th
 
 * `Product` belongs to many `Tag` models, and `Tag` belongs to many `Product` models. Allow products to have multiple tags and tags to have many products by using the `ProductTag` through model.
 
-> **Hint:** Make sure you set up foreign key relationships that match the column we created in the respective models.
+> **Hint:** Make sure you set up foreign key relationships that match the column we created in the respective models. -->
 
 ### Fill Out the API Routes to Perform RESTful CRUD Operations
 
@@ -183,7 +192,7 @@ Note that the functionality for creating the many-to-many relationship for produ
 After creating the models and routes, run `npm run seed` to seed data to your database so that you can test your routes.
 
 ### Sync Sequelize to the Database on Server Start
-
+w
 Create the code needed in `server.js` to sync the Sequelize models to the MySQL database on server start.
 
 ## Grading Requirements
